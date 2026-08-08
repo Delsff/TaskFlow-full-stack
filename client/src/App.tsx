@@ -165,7 +165,7 @@ export default function App() {
     <nav className='space-y-2'>
       <button
         onClick={() => handleTabChange('dashboard')}
-        className={`flex items-center gap-3 w-full px-4 py-3 font-semibold rounded-xl transition-colors ${
+        className={`cursor-pointer flex items-center gap-3 w-full px-4 py-3 font-semibold rounded-xl transition-colors ${
           activeTab === 'dashboard'
             ? 'bg-indigo-50 text-indigo-600'
             : 'text-slate-500 hover:bg-slate-50'
@@ -176,7 +176,7 @@ export default function App() {
       </button>
       <button
         onClick={() => handleTabChange('today')}
-        className={`flex items-center gap-3 w-full px-4 py-3 font-semibold rounded-xl transition-colors ${
+        className={`cursor-pointer flex items-center gap-3 w-full px-4 py-3 font-semibold rounded-xl transition-colors ${
           activeTab === 'today'
             ? 'bg-indigo-50 text-indigo-600'
             : 'text-slate-500 hover:bg-slate-50'
@@ -187,7 +187,7 @@ export default function App() {
       </button>
       <button
         onClick={() => handleTabChange('completed')}
-        className={`flex items-center gap-3 w-full px-4 py-3 font-semibold rounded-xl transition-colors ${
+        className={`cursor-pointer flex items-center gap-3 w-full px-4 py-3 font-semibold rounded-xl transition-colors ${
           activeTab === 'completed'
             ? 'bg-indigo-50 text-indigo-600'
             : 'text-slate-500 hover:bg-slate-50'
@@ -198,7 +198,7 @@ export default function App() {
       </button>
       <button
         onClick={() => handleTabChange('settings')}
-        className={`flex items-center gap-3 w-full px-4 py-3 font-semibold rounded-xl transition-colors ${
+        className={`cursor-pointer flex items-center gap-3 w-full px-4 py-3 font-semibold rounded-xl transition-colors ${
           activeTab === 'settings'
             ? 'bg-indigo-50 text-indigo-600'
             : 'text-slate-500 hover:bg-slate-50'
@@ -229,7 +229,7 @@ export default function App() {
         </div>
         <button
           onClick={handleLogout}
-          className='flex items-center gap-3 text-slate-400 hover:text-red-500 font-medium px-4 py-2 transition-colors'
+          className='cursor-pointer flex items-center gap-3 text-slate-400 hover:text-red-500 font-medium px-4 py-2 transition-colors'
         >
           <LogOut size={20} />
           Sign Out
@@ -250,7 +250,7 @@ export default function App() {
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className='p-2 text-slate-400 hover:text-slate-600 rounded-lg'
+              className='cursor-pointer p-2 text-slate-400 hover:text-slate-600 rounded-lg'
             >
               <X size={24} />
             </button>
@@ -259,7 +259,7 @@ export default function App() {
         </div>
         <button
           onClick={handleLogout}
-          className='flex items-center gap-3 text-slate-400 hover:text-red-500 font-medium px-4 py-2 transition-colors mt-auto'
+          className='cursor-pointer flex items-center gap-3 text-slate-400 hover:text-red-500 font-medium px-4 py-2 transition-colors mt-auto'
         >
           <LogOut size={20} />
           Sign Out
@@ -270,7 +270,7 @@ export default function App() {
           <div className='flex items-center gap-3'>
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className='p-2 bg-white rounded-xl border border-slate-200 text-slate-600 md:hidden hover:bg-slate-50 transition-colors'
+              className='cursor-pointer p-2 bg-white rounded-xl border border-slate-200 text-slate-600 md:hidden hover:bg-slate-50 transition-colors'
               aria-label='Open menu'
             >
               <Menu size={22} />
@@ -289,11 +289,11 @@ export default function App() {
           <div className='relative'>
             <button
               onClick={() => setShowNotifications(!showNotifications)}
-              className='p-2 bg-white rounded-xl border border-slate-200 text-slate-500 hover:text-indigo-600 relative transition-colors'
+              className='cursor-pointer p-2 bg-white rounded-xl border border-slate-200 text-slate-500 hover:text-indigo-600 relative transition-colors'
             >
               <Bell size={20} />
               {notifications.length > 0 && (
-                <span className='absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold'>
+                <span className='cursor-pointer absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold'>
                   {notifications.length}
                 </span>
               )}
@@ -304,7 +304,7 @@ export default function App() {
                   <h3 className='font-bold text-slate-800 text-sm'>Notifications</h3>
                   <button
                     onClick={() => setNotifications([])}
-                    className='text-xs text-indigo-600 hover:underline'
+                    className='cursor-pointer text-xs text-indigo-600 hover:underline'
                   >
                     Clear
                   </button>
@@ -381,7 +381,7 @@ export default function App() {
               />
               <button
                 type='submit'
-                className='px-6 py-3 sm:py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-2xl transition-all shadow-md shadow-indigo-200 flex items-center justify-center gap-2'
+                className='cursor-pointer px-6 py-3 sm:py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-2xl transition-all shadow-md shadow-indigo-200 flex items-center justify-center gap-2'
               >
                 <Plus size={20} />
                 <span>Add Task</span>
@@ -399,19 +399,19 @@ export default function App() {
               <div className='flex bg-slate-200/60 p-1 rounded-xl gap-1 text-xs sm:text-sm font-medium w-full sm:w-auto overflow-x-auto'>
                 <button
                   onClick={() => setFilter('all')}
-                  className={`flex-1 sm:flex-none px-3 sm:px-4 py-1.5 rounded-lg transition-all ${filter === 'all' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}
+                  className={`cursor-pointer flex-1 sm:flex-none px-3 sm:px-4 py-1.5 rounded-lg transition-all ${filter === 'all' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}
                 >
                   All
                 </button>
                 <button
                   onClick={() => setFilter('pending')}
-                  className={`flex-1 sm:flex-none px-3 sm:px-4 py-1.5 rounded-lg transition-all ${filter === 'pending' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}
+                  className={`cursor-pointer flex-1 sm:flex-none px-3 sm:px-4 py-1.5 rounded-lg transition-all ${filter === 'pending' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}
                 >
                   Pending
                 </button>
                 <button
                   onClick={() => setFilter('completed')}
-                  className={`flex-1 sm:flex-none px-3 sm:px-4 py-1.5 rounded-lg transition-all ${filter === 'completed' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}
+                  className={`cursor-pointer flex-1 sm:flex-none px-3 sm:px-4 py-1.5 rounded-lg transition-all ${filter === 'completed' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}
                 >
                   Completed
                 </button>
@@ -435,7 +435,7 @@ export default function App() {
                     <div className='flex items-center gap-3 min-w-0'>
                       <button
                         onClick={() => handleToggleStatus(task)}
-                        className='text-slate-400 hover:text-indigo-600 transition-colors shrink-0'
+                        className='cursor-pointer text-slate-400 hover:text-indigo-600 transition-colors shrink-0'
                       >
                         {task.status === 'completed' ? (
                           <CheckCircle2 size={22} className='text-emerald-500' />
@@ -451,7 +451,7 @@ export default function App() {
                     </div>
                     <button
                       onClick={() => handleDeleteTask(task._id)}
-                      className='text-slate-300 hover:text-red-500 transition-colors p-1 shrink-0'
+                      className='cursor-pointer text-slate-300 hover:text-red-500 transition-colors p-1 shrink-0'
                     >
                       <Trash2 size={18} />
                     </button>
@@ -483,7 +483,7 @@ export default function App() {
                     <div className='flex items-center gap-3 min-w-0'>
                       <button onClick={() => handleToggleStatus(task)} className='shrink-0'>
                         {task.status === 'completed' ? (
-                          <CheckCircle2 size={22} className='text-emerald-500' />
+                          <CheckCircle2 size={22} className='cursor-pointer text-emerald-500' />
                         ) : (
                           <Circle size={22} />
                         )}
@@ -496,7 +496,7 @@ export default function App() {
                     </div>
                     <button
                       onClick={() => handleDeleteTask(task._id)}
-                      className='text-slate-300 hover:text-red-500 shrink-0'
+                      className='cursor-pointer text-slate-300 hover:text-red-500 shrink-0'
                     >
                       <Trash2 size={18} />
                     </button>
@@ -533,7 +533,7 @@ export default function App() {
                       </div>
                       <button
                         onClick={() => handleDeleteTask(task._id)}
-                        className='text-slate-300 hover:text-red-500 shrink-0'
+                        className='cursor-pointer text-slate-300 hover:text-red-500 shrink-0'
                       >
                         <Trash2 size={18} />
                       </button>
@@ -579,7 +579,7 @@ export default function App() {
                 </div>
                 <button
                   type='submit'
-                  className='w-full sm:w-auto px-5 py-2.5 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 transition-colors text-sm'
+                  className='cursor-pointer w-full sm:w-auto px-5 py-2.5 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 transition-colors text-sm'
                 >
                   Save changes
                 </button>
