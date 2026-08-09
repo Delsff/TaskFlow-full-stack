@@ -432,7 +432,7 @@ export default function App() {
             ) : filteredTasks.length === 0 ? (
               <div className='text-center py-12 bg-white rounded-2xl border border-slate-200'>
                 <p className='text-slate-400 text-sm sm:text-base'>
-                  {searchQuery ? 'Задач по вашему запросу не найдено' : 'Нет задач'}
+                  {searchQuery ? 'No task found matching your request.' : 'You have no tasks.'}
                 </p>
               </div>
             ) : (
