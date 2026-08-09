@@ -11,7 +11,7 @@ const generateToken = (id) => {
 const registerUser = async (req,res) => {
     try {
         const {name, email,password} = req.body
-        if(!name,!email,!password) {
+        if(!name || !email || !password) {
             return res.status(400).json({message: 'Fill in all fields.'})
         }
         const userExists = await User.findOne({email})
