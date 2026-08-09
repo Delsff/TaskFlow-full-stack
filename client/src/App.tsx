@@ -71,6 +71,16 @@ export default function App() {
     fetchTasks();
   }, [currentUser]);
 
+  useEffect(() => {
+    if(isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  },[isMobileMenuOpen])
   const handleCreateTask = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     if (!title.trim() || !currentUser) return;
