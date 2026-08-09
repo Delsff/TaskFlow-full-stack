@@ -20,7 +20,7 @@ const createTask = async (req, res) => {
       priority: priority || 'MEDIUM',
       status: status || 'pending',
       dueDate,
-      user: ureq.user._id,
+      user: req.user._id,
     });
     res.status(201).json(newTask);
   } catch (error) {
